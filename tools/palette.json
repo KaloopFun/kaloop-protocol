@@ -1,0 +1,16 @@
+{
+  "method": "k-means (k-means++ seeding, PRNG seed 1234567, Lloyd iterations) on RGB of every 7th opaque pixel (PNG) or every 11th pixel (JPEG); each centroid snapped to the nearest real pixel in its cluster. Coordinates are x,y from the top-left of the source image.",
+  "swatches": [
+    { "role": "bg",            "hex": "#0d0f0e", "file": "brand/LOGO KALOOP PNG.png",               "x": 0,    "y": 0 },
+    { "role": "accent",        "hex": "#7dcbc1", "file": "brand/LOGO KALOOP PNG.png",               "x": 1234, "y": 701 },
+    { "role": "logo-body",     "hex": "#7dcdc2", "file": "brand/LOGO KALOOP PNG...png",             "x": 1195, "y": 699 },
+    { "role": "accent-bright", "hex": "#7fddd4", "file": "reference/KALOOP 1.jpg.jpeg",             "x": 1135, "y": 576 },
+    { "role": "accent-soft",   "hex": "#68b6b0", "file": "reference/KALOOP 1.jpg.jpeg",             "x": 1119, "y": 467 },
+    { "role": "accent-deep",   "hex": "#2c6463", "file": "reference/KALOOP 1.jpg.jpeg",             "x": 1253, "y": 526 },
+    { "role": "surface-tint",  "hex": "#112d2d", "file": "reference/KALOOP 1.jpg.jpeg",             "x": 1080, "y": 312 },
+    { "role": "ink",           "hex": "#f3f5f4", "file": "reference/SAMPUL KALOOP JPG.jpg.jpeg",    "x": 695,  "y": 203 },
+    { "role": "muted",         "hex": "#b6b8b7", "file": "reference/SAMPUL KALOOP JPG.jpg.jpeg",    "x": 775,  "y": 216 },
+    { "role": "grey",          "hex": "#75797a", "file": "reference/SAMPUL KALOOP JPG.jpg.jpeg",    "x": 669,  "y": 303 },
+    { "role": "line",          "hex": "#3b4141", "file": "reference/SAMPUL KALOOP JPG.jpg.jpeg",    "x": 778,  "y": 306 }
+  ]
+}

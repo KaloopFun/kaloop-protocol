@@ -1,0 +1,14 @@
+{
+  "name": "kaloop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Kaloop landing site for chain 4663.",
+  "scripts": {
+    "build": "node build.mjs",
+    "gates": "node gates/run.mjs"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.0.0"
+  }
+}

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaloop — build what comes next on RH Chain</title>
+<meta name="description" content="Kaloop is a token launch platform for RH Chain, network 4663. Create a token, bring a community along, and keep control in the wallet that holds it.">
+<meta name="theme-color" content="{{theme_color}}">
+<link rel="canonical" href="{{canonical}}">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/app.css">
+<script>document.documentElement.classList.add('js');if(window.__KALOOP_FAST__)document.documentElement.dataset.clock='fast';</script>
+</head>
+<body>
+<a class="skip" href="#main">Jump to the main part</a>
+<div class="progress" aria-hidden="true"></div>
+
+<div class="top">
+  <div class="wrap ca-bar" id="ca">
+    <span class="ca-label">Contract</span>
+    {{ca}}
+  </div>
+</div>
+
+<header class="wrap site-header">
+  <a class="brand" href="#main" aria-label="Kaloop, back to top">
+    {{mark}}
+    <span class="brand-name">Kaloop</span>
+  </a>
+  <div class="status-pill" id="pill" data-state="connecting" role="status">
+    <span class="dot" aria-hidden="true"></span>
+    <span class="pill-text">Reaching chain</span>
+  </div>
+  <div class="socials">
+    {{social_x}}
+    {{social_github}}
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap">
+    <div class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow" data-reveal>Token platform · network 4663</p>
+        <h1 data-reveal>Build what comes next.</h1>
+        <p class="lede" data-reveal>Kaloop takes a loose concept all the way to a token that trades on RH Chain. Make it, fund it and steer it with the wallet that already holds the keys.</p>
+        <div class="actions" data-reveal>
+          <a class="btn btn-solid" href="#pulse"><span>Watch the network</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+          <a class="btn btn-ghost" href="#loop"><span>How it works</span></a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hv-glow"></div>
+        <div class="depth" style="--d:0.25"><svg class="orbit orbit-a" viewBox="0 0 400 400"><ellipse cx="200" cy="200" rx="170" ry="170" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 9"/></svg></div>
+        <div class="depth" style="--d:0.45"><svg class="orbit orbit-b" viewBox="0 0 400 400"><circle cx="200" cy="200" r="118" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="210 40"/><circle cx="318" cy="200" r="6" fill="currentColor"/></svg></div>
+        <div class="depth" style="--d:0.8"><img class="logo-float" src="/assets/logo-mark-512.png" width="512" height="512" alt="" decoding="async"></div>
+        <div class="depth" style="--d:1.2"><span class="chip chip-a">4663</span></div>
+        <div class="depth" style="--d:1.5"><span class="chip chip-b">EVM</span></div>
+        <div class="depth" style="--d:1"><span class="chip chip-c">KALOOP</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section" id="pulse">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>Live readout</p>
+      <h2 data-reveal>The network, right now</h2>
+      <p class="sub" data-reveal>Fetched inside your browser from open endpoints the moment you arrive, then refreshed while you stay. Nothing on this strip is mocked or cached by us.</p>
+    </div>
+    <div class="stats">
+      <article class="stat stat-wide" data-reveal data-card="tvl" data-state="loading" aria-busy="true">
+        <h3 class="stat-label">Value locked</h3>
+        <p class="stat-val"><span class="skel" aria-hidden="true"></span><span class="num" data-num="tvl"></span><span class="err">Unavailable</span></p>
+        <p class="stat-sub"><span data-num="tvlchg"></span><span class="stat-src">Across the chain, per {{tvl_label}}</span></p>
+        <svg class="spark" viewBox="0 0 200 56" preserveAspectRatio="none" aria-hidden="true"><path data-spark="area" class="spark-area" d=""/><path data-spark="line" class="spark-line" pathLength="1" d=""/></svg>
+      </article>
+      <article class="stat" data-reveal data-card="block" data-state="loading" aria-busy="true">
+        <h3 class="stat-label">Latest block</h3>
+        <p class="stat-val"><span class="skel" aria-hidden="true"></span><span class="num" data-num="block"></span><span class="err">Unavailable</span></p>
+        <p class="stat-sub"><span class="stat-src">Straight from the public node</span></p>
+      </article>
+      <article class="stat" data-reveal data-card="gas" data-state="loading" aria-busy="true">
+        <h3 class="stat-label">Gas price</h3>
+        <p class="stat-val"><span class="skel" aria-hidden="true"></span><span class="num" data-num="gas"></span><span class="err">Unavailable</span></p>
+        <p class="stat-sub"><span class="stat-src">gwei, as the node quotes it</span></p>
+      </article>
+      <article class="stat" data-reveal data-card="chainid" data-state="ready">
+        <h3 class="stat-label">Chain id</h3>
+        <p class="stat-val"><span class="num" data-num="chainid">{{chain_id}}</span></p>
+        <p class="stat-sub"><span class="stat-src">The network's fixed identity</span></p>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap section" id="loop">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>How a launch runs</p>
+      <h2 data-reveal>From first sketch to open market</h2>
+      <p class="sub" data-reveal>A release should not be the last page of the story. Kaloop is built around the whole turn.</p>
+    </div>
+    <ol class="steps">
+      <li class="step" data-reveal>
+        <span class="step-no">01</span>
+        <svg class="step-ring" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="30 90" stroke-linecap="round"/></svg>
+        <h3>Create</h3>
+        <p>Name the token, size the supply and settle the terms in a single sitting, before anything touches the network.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step-no">02</span>
+        <svg class="step-ring" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="60 60" stroke-linecap="round"/></svg>
+        <h3>Fund</h3>
+        <p>Raise capital if the project calls for it, including an extra path that begins on RH Chain. Each amount is laid out before anyone signs.</p>
+      </li>
+      <li class="step" data-reveal>
+        <span class="step-no">03</span>
+        <svg class="step-ring" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Own</h3>
+        <p>Control stays with whoever holds the keys. Manage the token, watch the market, and let the community hold a real share.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="wrap section" id="market">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>Nearby markets</p>
+      <h2 data-reveal>What is trading around us</h2>
+      <p class="sub" data-reveal>The deepest pools our search could find for network 4663, ranked by pooled liquidity.</p>
+    </div>
+    <div class="panel" data-reveal>
+      <div class="pairs-head" aria-hidden="true"><span>Pair</span><span>Price</span><span>24h</span><span>Liquidity</span><span></span></div>
+      <ul class="pairs" id="pairs" data-state="loading" aria-busy="true" aria-label="Pairs listed for network 4663">
+        <li class="pair-item"><div class="pair-row is-skel"><span class="skel"></span></div></li>
+        <li class="pair-item"><div class="pair-row is-skel"><span class="skel"></span></div></li>
+        <li class="pair-item"><div class="pair-row is-skel"><span class="skel"></span></div></li>
+        <li class="pair-item"><div class="pair-row is-skel"><span class="skel"></span></div></li>
+        <li class="pair-item"><div class="pair-row is-skel"><span class="skel"></span></div></li>
+      </ul>
+      <div class="kline" id="kline" data-contract="{{contract_state}}">
+        <span class="kline-label">Kaloop market line</span>
+        <span class="kline-empty">Appears here once the contract has a trading pair.</span>
+        <span class="kline-data"><b data-kline="price">—</b><i data-kline="chg"></i><i data-kline="liq"></i></span>
+      </div>
+      <p class="panel-note">Source · {{pair_label}} search, refreshed every minute.</p>
+    </div>
+  </section>
+
+  <section class="wrap section" id="records">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>Open records</p>
+      <h2 data-reveal>What we have said out loud</h2>
+      <p class="sub" data-reveal>A link or an address shows up below only after it is announced. Until then the slot stays quiet and nothing points anywhere.</p>
+    </div>
+    <ul class="records">
+      {{records}}
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap site-footer">
+  <div class="foot-main">
+    <span class="foot-brand">{{mark}}<span>Kaloop</span></span>
+    <span class="foot-domain">{{domain_host}}</span>
+  </div>
+  <p class="foot-note">Numbers come from {{tvl_label}}, a public node and {{pair_label}}.</p>
+  <nav class="foot-links" aria-label="Feed providers">
+    <a href="{{tvl_site}}" target="_blank" rel="noopener noreferrer">{{tvl_label}}</a>
+    <a href="{{pair_site}}" target="_blank" rel="noopener noreferrer">{{pair_label}}</a>
+  </nav>
+</footer>
+
+<script type="application/json" id="register">{{register_json}}</script>
+<script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

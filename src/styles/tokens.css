@@ -1,0 +1,78 @@
+/*
+  Kaloop design tokens. The ONLY file allowed to hold colour literals.
+
+  PALETTE PROVENANCE (sampled from the real brand files, not guessed):
+  k-means (k-means++ seeding, seed 1234567) over image pixels, each centroid
+  snapped to the nearest real pixel of its cluster. Full record, with the
+  source file and x,y of every swatch, lives in tools/palette.json and is
+  re-checked against the images by the gates.
+
+    #0d0f0e  brand/LOGO KALOOP PNG.png            (0,0)      logo backdrop
+    #7dcbc1  brand/LOGO KALOOP PNG.png            (1234,701) logo body
+    #7dcdc2  brand/LOGO KALOOP PNG...png          (1195,699) logo body, transparent file
+    #7fddd4  reference/KALOOP 1.jpg.jpeg          (1135,576) slide glow
+    #68b6b0  reference/KALOOP 1.jpg.jpeg          (1119,467) slide mid teal
+    #2c6463  reference/KALOOP 1.jpg.jpeg          (1253,526) slide deep teal
+    #112d2d  reference/KALOOP 1.jpg.jpeg          (1080,312) slide dark teal
+    #f3f5f4  reference/SAMPUL KALOOP JPG.jpg.jpeg (695,203)  wordmark white
+    #b6b8b7  reference/SAMPUL KALOOP JPG.jpg.jpeg (775,216)  tagline grey
+    #75797a  reference/SAMPUL KALOOP JPG.jpg.jpeg (669,303)  neutral grey
+    #3b4141  reference/SAMPUL KALOOP JPG.jpg.jpeg (778,306)  neutral dark grey
+
+  Every other colour below is a mix of these, never a new literal.
+*/
+:root {
+  color-scheme: dark;
+
+  --bg: #0d0f0e;
+  --accent: #7dcbc1;
+  --accent-bright: #7fddd4;
+  --accent-soft: #68b6b0;
+  --accent-deep: #2c6463;
+  --tint: #112d2d;
+  --ink: #f3f5f4;
+  --muted: #b6b8b7;
+  --grey: #75797a;
+  --line: #3b4141;
+
+  --surface: color-mix(in oklab, var(--bg) 82%, var(--tint));
+  --surface-2: color-mix(in oklab, var(--bg) 62%, var(--tint));
+  --line-strong: var(--grey);
+  --faint: color-mix(in oklab, var(--muted) 72%, var(--bg));
+  --ink-hover: var(--accent-bright);
+  --ink-inverse: var(--bg);
+
+  --ink-04: color-mix(in srgb, var(--ink) 4%, transparent);
+  --ink-08: color-mix(in srgb, var(--ink) 8%, transparent);
+  --ink-14: color-mix(in srgb, var(--ink) 14%, transparent);
+  --ink-24: color-mix(in srgb, var(--ink) 24%, transparent);
+  --ink-40: color-mix(in srgb, var(--ink) 40%, transparent);
+  --acc-08: color-mix(in srgb, var(--accent) 8%, transparent);
+  --acc-16: color-mix(in srgb, var(--accent) 16%, transparent);
+  --acc-30: color-mix(in srgb, var(--accent) 30%, transparent);
+  --acc-50: color-mix(in srgb, var(--accent) 50%, transparent);
+  --shade-60: color-mix(in srgb, var(--bg) 60%, transparent);
+  --glow: color-mix(in srgb, var(--accent-bright) 22%, transparent);
+
+  --skel-a: color-mix(in oklab, var(--bg) 80%, var(--tint));
+  --skel-b: color-mix(in oklab, var(--bg) 45%, var(--tint));
+
+  --font-sans: ui-sans-serif, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", "SF Mono", Consolas, "Liberation Mono", monospace;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-float: cubic-bezier(0.45, 0, 0.55, 1);
+  --dur-fast: calc(150ms * var(--ts));
+  --dur-mid: calc(320ms * var(--ts));
+
+  --ts: 1;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --tap: 48px;
+}
+
+/* Fast clock: set by the gates so waits stay short. Never set in production. */
+:root[data-clock="fast"] {
+  --ts: 0.04;
+}
